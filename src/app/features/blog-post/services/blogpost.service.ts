@@ -13,6 +13,6 @@ export class BlogpostService {
   constructor(private http: HttpClient) { }
 
   createBlogPost(model: AddBlogPost): Observable<BlogPost> {
-    return this.http.post<BlogPost>(`${environment}/api/blogposts`, model)
+    return this.http.post<BlogPost>(`${environment.apiBaseUrl}/api/blogposts`, model)
   }
 }
