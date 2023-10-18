@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AddBlogPost } from '../models/add-blog-post.model';
-import { BlogpostService } from '../services/blogpost.service';
+import { BlogPostService } from '../services/blogpost.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class AddBlogpostComponent {
   model: AddBlogPost;
 
-  constructor(private blogPostService: BlogpostService,
+  constructor(private blogPostService: BlogPostService,
     private router: Router) {
     this.model = {
       title: '',
