@@ -1,3 +1,4 @@
+import { EditBlogpostComponent } from './features/blog-post/edit-blogpost/edit-blogpost.component';
 import { CategoryListComponent } from './features/category/category-list/category-list.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'admin/blogposts/add',
     component: AddBlogpostComponent
+  },
+  {
+    path: 'admin/blogposts/:id',
+    component: EditBlogpostComponent
   }
 
 ];
