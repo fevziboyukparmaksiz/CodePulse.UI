@@ -1,3 +1,4 @@
+import { BlogDetailsComponent } from './features/public/blog-details/blog-details.component';
 import { EditBlogpostComponent } from './features/blog-post/edit-blogpost/edit-blogpost.component';
 import { CategoryListComponent } from './features/category/category-list/category-list.component';
 import { NgModule } from '@angular/core';
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent
+  },
+  {
+    path: 'blog/:url',
+    component: BlogDetailsComponent
   }
 
 ];
