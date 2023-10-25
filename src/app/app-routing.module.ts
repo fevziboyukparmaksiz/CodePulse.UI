@@ -8,6 +8,7 @@ import { EditCategoryComponent } from './features/category/edit-category/edit-ca
 import { BlogpostListComponent } from './features/blog-post/blogpost-list/blogpost-list.component';
 import { AddBlogpostComponent } from './features/blog-post/add-blogpost/add-blogpost.component';
 import { HomeComponent } from './features/public/home/home.component';
+import { LoginComponent } from './features/auth/login/login.component';
 
 const routes: Routes = [
   {
@@ -41,6 +42,10 @@ const routes: Routes = [
   {
     path: 'blog/:url',
     component: BlogDetailsComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   }
 
 ];
