@@ -26,7 +26,16 @@ export class LoginComponent {
   onFormSubmit(): void {
     this.authService.login(this.model).subscribe({
       next: (response) => {
+        //set auth cookie
         this.cookieService.set('Authorization', `Bearer ${response.token}`, { secure: true, sameSite: 'Strict' })
+
+        //set user
+        this.authService.setUser({
+          email:response.email,
+          roles:response.roles
+        });
+
+        //redirect back to home
         this.router.navigateByUrl('/')
       },
     })
